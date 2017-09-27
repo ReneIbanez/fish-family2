@@ -1,5 +1,11 @@
 <footer class="content-info">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+    <h2>Fish Family Foundation</h2>
+     <ul>
+        <li>About</li>
+        <li>History</li>
+        <li>Core Iniiatives</li>
+    </ul>
   </div>
 </footer>
+

@@ -7,8 +7,16 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-<?php endwhile; ?>
+<?php 
+$posts = get_posts('category_name=home_page'); 
+sort($posts);
+foreach($posts as $post) { 
+    setup_postdata( $post );
+
+    the_title(); ?>
+    <p><?php the_content(); ?></p>
+    <?php the_post_thumbnail() ?>
+<?php } ?>
 
 <?php the_posts_navigation(); ?>
+
