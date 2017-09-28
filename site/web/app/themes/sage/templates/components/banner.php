@@ -1,9 +1,7 @@
 <section class="hero-banner">
   <?php echo the_post_thumbnail(); ?>
   <div class="content">
-    <?php echo the_content(); ?>
-    <a href="#">
+    <?php echo get_field('just-testing'); ?>
     <button>Button</button>
-    </a>
   </div>
 </section>
