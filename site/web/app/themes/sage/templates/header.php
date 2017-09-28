@@ -1,13 +1,9 @@
 <header>
-  <div>
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
-  </div>
-  <?php get_template_part('templates/navigation/navigation-drawer'); ?>
+      <h1><?php the_field('title'); ?></h1>
+      <?php if( have_rows('menu') ): ?>
+        <nav><?php while(have_rows('menu') ): ?>
+            <?php the_row(); ?>
+                <span class="navItems"><a href="#"><?php the_sub_field('menu_items'); ?></a></span>
+           <?php endwhile; ?></nav>
+        <?php endif; ?>
 </header>
