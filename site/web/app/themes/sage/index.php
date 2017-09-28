@@ -11,9 +11,9 @@
 $posts = get_posts('category_name=home_page'); 
 sort($posts);
 foreach($posts as $post) { 
-    setup_postdata( $post );
+    setup_postdata( $post );?>
 
-    the_title(); ?>
+   <h2><?php  the_title(); ?></h2>
     <p><?php the_content(); ?></p>
     <?php the_post_thumbnail() ?>
 <?php } ?>
