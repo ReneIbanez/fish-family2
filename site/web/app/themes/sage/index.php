@@ -6,8 +6,12 @@
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
+<article>
+  <h2 class="tagine"> <?php echo get_post_meta(49, 'header', true); ?> </h2>
+  <h3><?php echo get_post_meta(49,"sub-header",true); ?></h3>
+</article>
+<?php
 
-<?php 
 $posts = get_posts('category_name=home_page'); 
 sort($posts);
 foreach($posts as $post) { 
@@ -19,4 +23,6 @@ foreach($posts as $post) {
 <?php } ?>
 
 <?php the_posts_navigation(); ?>
+
+
 
