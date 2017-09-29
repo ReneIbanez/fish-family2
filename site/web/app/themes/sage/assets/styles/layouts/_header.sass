@@ -5,12 +5,14 @@ header
   padding: 10px 50px 0 50px
   display: block
   overflow: auto
-  border-bottom: 1px solid grey
+  border-bottom: 1px solid #cfcfcf
 
-  h1 
+  h1
     float: left
     font:  $lora-font
     font-size: 1.5em
+    font-family: serif
+    font-weight: 100
 
   nav 
     float: right
@@ -22,4 +24,9 @@ header
       text-decoration: none
       font-size: 1em 
       margin-left: 15px
+
+@media screen and (max-width: 730px) 
+  header
+      h1
+          width: 42%      
       
